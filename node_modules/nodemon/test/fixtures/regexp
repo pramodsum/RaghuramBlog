@@ -1,1 +1,0 @@
-:(\d)*\.js    # monitor javascript files with only digits in their name
