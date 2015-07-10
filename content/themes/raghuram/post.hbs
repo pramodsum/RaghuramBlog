@@ -3,17 +3,27 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
-{{! Everything inside the #post tags pulls data from the post }}
-{{#post}}
-
-<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
+{{! The big featured header }}
+<header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    <nav class="main-nav overlay clearfix">
         {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
         {{#if @blog.navigation}}
             <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
         {{/if}}
     </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">{{@blog.title}}</h1>
+            <h2 class="page-description">{{@blog.description}}</h2>
+        </div>
+    </div>
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
 </header>
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+{{!-- <header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}"></header> --}}
 
 <main class="content" role="main">
     <article class="{{post_class}}">
@@ -53,7 +63,7 @@
 
 <aside class="read-next">
     {{#next_post}}
-    <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+    <a class="read-next-story" style="background-image: url(https://travelwithdarshik.files.wordpress.com/2014/01/statue-of-swami-vivekananda-at-entry-drive-into-svyasa-campus-bangalore.jpg)" href="{{url}}">
         <section class="post">
             <h2>{{title}}</h2>
             <p>{{excerpt words="19"}}&hellip;</p>
@@ -61,7 +71,7 @@
     </a>
     {{/next_post}}
     {{#prev_post}}
-    <a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+    <a class="read-next-story prev" style="background-image: url(https://travelwithdarshik.files.wordpress.com/2014/01/statue-of-krishna-and-arjuna-at-s-vyasa-campus.jpg)" href="{{url}}">
         <section class="post">
             <h2>{{title}}</h2>
             <p>{{excerpt words="19"}}&hellip;</p>
