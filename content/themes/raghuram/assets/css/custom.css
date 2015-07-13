@@ -7,7 +7,7 @@
   margin: 0;
 }
 
-#latest-title {
+#latest-title, #results {
   text-align: center;
   margin: auto;
 }
@@ -29,3 +29,14 @@
   margin-bottom: 1em
 }
 
+form {
+  text-align: center;
+  margin: auto;
+}
+form input {
+  margin-bottom: 0.5em;
+}
+
+.fb_iframe_widget iframe {
+  margin-top: 0;
+}
