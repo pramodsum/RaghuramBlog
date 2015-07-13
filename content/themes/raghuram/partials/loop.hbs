@@ -13,7 +13,7 @@
         <p>{{content words="100"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
     </section>
     <footer class="post-meta">
-        <i class="ion-pricetag"></i> {{tags}}
+        {{#if tags}}<i class="ion-pricetag"></i> {{tags}}{{/if}}
     </footer>
 </article>
 {{/foreach}}
