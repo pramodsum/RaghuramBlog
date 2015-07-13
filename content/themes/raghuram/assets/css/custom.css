@@ -58,3 +58,20 @@ form input {
 .post-footer .share .icon-google-plus:hover {
     color: #dd4b39;
 }
+
+.page-title a {
+  text-decoration: none;
+    text-shadow: 2px 2px grey;
+    color: #252120;
+}
+
+.page-title a:hover {
+  text-decoration: none;
+    text-shadow: 2px 2px #252120;
+    color: #9B6C64;
+}
+
+.post {
+  margin-top: 0;
+  margin-bottom: 4rem;
+}
