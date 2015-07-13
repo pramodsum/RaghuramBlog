@@ -1,0 +1,31 @@
+#latest-posts li a{
+  font-size: 0.85em !important;
+  text-decoration: none;
+}
+
+#latest-posts li {
+  margin: 0;
+}
+
+#latest-title {
+  text-align: center;
+  margin: auto;
+}
+#results h2 {
+  font-size: 1em;
+  text-decoration: bold;
+}
+
+#results a {
+  text-decoration: none;
+}
+#results h4 {
+  font-size: 0.75em;
+}
+#results p {
+  margin-bottom: 0.5em;
+}
+#results a p {
+  margin-bottom: 1em
+}
+
